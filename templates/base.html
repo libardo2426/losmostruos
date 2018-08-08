@@ -1,0 +1,385 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <title>{% page_attribute 'page_title' %} | Los Monstruos</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Emphasize Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- // custom-theme -->
+    <!--css links-->
+    <link href="{% static 'Emphasize/css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+    <!--bootstrap-->
+    <link href="{% static 'Emphasize/css/font-awesome.css'%}" rel="stylesheet">
+    <!--font-awesome-->
+    <link href="{% static 'Emphasize/css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'Emphasize/css/all.css'%}" rel="stylesheet" type="text/css" media="all" />
+    <!--stylesheet-->
+    <!--//css links-->
+    <!--fonts-->
+    <link href="//fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+    <!--//fonts-->
+    {% block css %}{% endblock %}
+    {% render_block "css" %}
+</head>
+
+<body>
+    {% cms_toolbar %}
+    <!-- Header -->
+    <div id="home" class="{% block class-header %}{% endblock %}">
+        <div class="header-nav">
+            <nav class="navbar navbar-default">
+                <div class="header-top">
+                    <div class="navbar-header logo">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <h1>
+							<a class="navbar-brand" href="/">
+								{% static_placeholder 'logo'%}
+							</a>
+						</h1>
+                    </div>
+                    <!-- navbar-header -->
+                    <div class="contact-bnr-w3-agile">
+                        <ul>
+                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">{% static_placeholder 'contacto_email'%}</a></li>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i>{% static_placeholder 'contacto_telefono'%}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse cl-effect-13" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        {% show_menu  %}
+
+                        <li>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="#" class="btn btn-primary-nav color-login" data-toggle="modal" data-target="#login">Iniciar Sesión</a>
+                                <a href="#" class="btn btn-primary-nav color-register" data-toggle="modal" data-target="#signup">Registrate</a>
+                            </div>
+                        </li>
+                            <!--a href="#" class="btn btn-primary-nav color-login" data-toggle="modal" data-target="#login">Iniciar Sesión</a-->
+
+                        <!--li><a href="#" class="btn btn-primary-nav color-register" data-toggle="modal" data-target="#signup">Registrate</a></li-->
+                    </ul>
+
+                </div>
+                <div class="clearfix"> </div>
+            </nav>
+            <div class="clearfix"> </div>
+        </div>
+        {% block header %}{% endblock %}
+    </div>
+
+    <main>
+        <!-- sigin -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4>Iniciar sesión</h4>
+                        <div class="row">
+                            <div class="form-w3layouts">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                        			<input type="text" name="usuario" placeholder="usuario" required="true">
+                        			<input type="password" name="password" placeholder="contraseña" required="true">
+                        			<input type="submit" value="inisiar sesion">
+                        		</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sigup -->
+        <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4>Registrate</h4>
+                        <div class="row">
+                            <div class="form-w3layouts">
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                        			<input type="text" name="username" placeholder="usuario" required="true">
+                        			<input type="email" name="email" placeholder="correo electroníco" required="true">
+                        			<input type="password" name="password1" placeholder="contraseña" required="true">
+                        			<input type="password" name="password2" placeholder="confirmar contraseña" required="true">
+                        			<input type="submit" value="inisiar sesion">
+                        		</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Header -->
+        <!-- Modal1 -->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog  modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="row">
+                            <div class="form-w3layouts">
+                                <form action="" method="post">
+                                    <h4>Información de contacto</h4>
+                                    {%csrf_token %}
+                                    <div class="col-sm-6">
+                                        <input type="text" name="first_name" placeholder="Nombre" required="true">
+                                		<input type="text" name="last_name" placeholder="Apellidos" required="true">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="usuario_telefono" placeholder="Numero de telefono" required="true">
+                                        <input type="text" name="email" placeholder="Correo Electronico" required="true">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="text" name="usuario_ciudad" placeholder="Ciudad / Pais" required="true">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="estudiante_carrera" placeholder="carrera" required="true">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="estudiante_institucion" placeholder="universidad" required="true">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="estudiante_semestre" placeholder="Semestre" required="true">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <select name="hora_llamada"  required="true">
+                                            <option disabled selected>¿A qué hora te podemos llamar?</option>
+                                            <option value="inmediatamente">lo más pronto posible</option>
+                                            <option value="mañana">En la mañana</option>
+                                            <option value="tarde">En la tarde</option>
+                                            <option value="noche">En la noche</option>
+                                        </select>
+                                        <select name="nosotros"  required="true">
+                                            <option disabled selected>¿Comó supiste de nosotros?</option>
+                                            <option value="facebook">Facebook</option>
+                                            <option value="twitter">Twitter</option>
+                                            <option value="imstagram">Imstagram</option>
+                                            <option value="whatsapp">Whatsapp</option>
+                                            <option value="mail">Mail</option>
+                                            <option value="amigo">Un amigo</option>
+                                            <option value="google">Google</option>
+                                        </select>
+                                    </div>
+
+                            		<div class="col-sm-12">
+                            		    <button class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
+                                		<input type="submit" class="btn btn-primary pull-right" value="Enviar">
+                            		</div>
+                            	</form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% block content %}{% endblock %}
+
+
+    </main>
+
+    <!-- footer -->
+    <div class="contact-w3ls color-bg-black">
+        <div class="contact-top-w3-agile">
+        </div>
+        <div class="container">
+            <h2 class="heading-agileinfo white-w3ls">Contactanos<span class="black-w3ls color-text-white">Welcome to our Emphasize. We are glad to have you around.</span></h2>
+            <ul class="w3_address">
+                <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>{% static_placeholder 'contacto_telefono'%}</span></li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:info@example.com">l{% static_placeholder 'contacto_email'%}</a></span></li>
+                <li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="#" data-toggle="modal" data-target="#myModal1">Contactó >></a></span></li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="copy">
+                <ul class="banner-menu-w3layouts">
+                    {% show_menu  %}
+                </ul>
+                <ul class="agileits_social_list">
+                    <li><a onclick="javascript:redirect('https://www.facebook.com/los.monstruos')" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a onclick="javascript:redirect('https://instagram.com/losmonstruos_')" class="agile_twitter"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+                <p>© 2017 Emphasize . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+            </div>
+        </div>
+    </div>
+    <!--//footer -->
+    <!-- js -->
+    <script type="text/javascript" src="{% static 'Emphasize/js/jquery-2.1.4.min.js'%}"></script>
+    <!--//js -->
+    <script src="{% static 'Emphasize/js/SmoothScroll.min.js'%}"></script>
+    <!-- responsiveslides -->
+    <script src="{% static 'Emphasize/js/responsiveslides.min.js'%}"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        function redirect(dir){
+            window.open(dir);
+        }
+        $(function() {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function() {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function() {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: false,
+                nav: true,
+                speed: 3000,
+                namespace: "callbacks"
+            });
+        });
+    </script>
+    <!-- //responsiveslides -->
+    <!-- OnScroll-Number-Increase-JavaScript -->
+    <script type="text/javascript" src="{% static 'Emphasize/js/numscroller-1.0.js'%}"></script>
+    <!-- //OnScroll-Number-Increase-JavaScript -->
+    <!--Scrolling-top -->
+    <script type="text/javascript" src="{% static 'Emphasize/js/move-top.js'%}"></script>
+    <script type="text/javascript" src="{% static 'Emphasize/js/easing.js'%}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!--//Scrolling-top -->
+    <!--flexiselDemo1 -->
+    <script type="text/javascript">
+        $(window).load(function() {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 2,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 1
+                    },
+                    tablet: {
+                        changePoint: 991,
+                        visibleItems: 1
+                    }
+                }
+            });
+            $("#flexiselDemo2").flexisel({
+                visibleItems: 4,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 1
+                    },
+                    tablet: {
+                        changePoint: 991,
+                        visibleItems: 1
+                    }
+                }
+            });
+            $("#flexiselDemo3").flexisel({
+                visibleItems: 4,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 1
+                    },
+                    tablet: {
+                        changePoint: 991,
+                        visibleItems: 1
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="{% static 'Emphasize/js/jquery.flexisel.js'%}"></script>
+    <!--//flexiselDemo1 -->
+    <!-- smooth scrolling -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            	var defaults = {
+            	containerID: 'toTop', // fading element id
+            	containerHoverID: 'toTopHover', // fading element hover id
+            	scrollSpeed: 1200,
+            	easingType: 'linear'
+            	};
+            */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+        });
+    </script>
+    {% block js %}{% endblock %}
+    {% render_block "js" %}
+    <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- //smooth scrolling -->
+    <script type="text/javascript" src="{% static 'Emphasize/js/bootstrap-3.1.1.min.js'%}"></script>
+</body>
+
+</html>

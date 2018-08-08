@@ -1,0 +1,207 @@
+.btn-primary-nav{
+    margin: 0.8em 0em!important;
+    padding:  0.8em 0.8em!important;
+    color: #fff!important;
+}
+
+.btn-primary-nav a:hover{
+    background: #1ca0de!important;
+	 transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.color-login{
+    background-color: #235da9;
+}
+
+.color-register{
+    background-color: #b8b7b7;
+}
+
+.color-bg-black{
+    background-color: #000!important;
+}
+
+.color-bg-black:before{
+           border-color: transparent transparent #235da9 #235da9!important;
+}
+
+.color-bg-black:after{
+        border-color: transparent transparent #000000 #000000!important;
+}
+
+.color-text-white{
+    color: #fff!important;
+}
+
+.navbar-brand{
+    background-color: #ffffff!important;
+    padding:0.2em 0.8em!important;
+}
+
+.form-w3layouts input[type="text"], .form-w3layouts input[type="email"],
+.form-w3layouts input[type="password"], select, .form-w3layouts textarea {
+    font-size: 13px;
+    background: rgba(251, 251, 252, 0.11);
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #38383a;
+	color: #000;
+}
+
+.form-w3layouts {
+    padding-right: 3.0em;
+    padding-left: 3.0em;
+    width: 100%;
+}
+
+.form-w3layouts input[type="submit"] {
+    background: #235da9;
+    color: #fff;
+    padding: 8px 45px;
+    font-size: 15px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.form-w3layouts input[type="submit"]:hover{
+	background: #1ca0de;
+	 transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+@media(max-width:991px){
+    .form-w3layouts {
+        padding-left: 2.0em;
+        padding-right:2.0em;
+		width: 100%;
+	}
+}
+@media(max-width:900px){
+    .cform-w3layouts input[type="submit"] {
+		padding: 8px 30px;
+		letter-spacing: .8px;
+		font-size: 14px;
+	}
+}
+
+.navbar-default .navbar-nav > li > a{
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    letter-spacing: 0px!important;
+}
+
+.navbar-default .navbar-nav li a.active {
+    color: #508FD9!important;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color: #0177b5!important;
+}
+
+.contact-bnr-w3-agile ul li i{
+    color: #508FD9!important;
+}
+
+.banner-text {
+    background: rgba(0, 0, 0, 0.87)!important;
+}
+
+.more-button a{
+    background: #8b8b8a!important;
+}
+
+.more-button a:hover {
+    background: #0177b5!important;
+}
+
+.w3_grid_effect {
+    background: rgba(248, 250, 251, 0.2);
+}
+
+.cbp-ig-grid li {
+    border-left: 1px solid rgb(252, 253, 253)!important;
+}
+
+.cbp-ig-grid .cbp-ig-title:before{
+    background: #888787;
+}
+
+.cbp-ig-icon:before {
+    color: #235da9;
+}
+
+.cbp-ig-grid li > .w3_grid_effect:hover .cbp-ig-icon:before {
+    color: #ffffff;
+}
+
+.cbp-ig-icon:hover {
+    color: #ffffff;
+}
+
+.cbp-ig-grid li:last-child {
+    border-right: none!important;
+}
+
+.popular-grid{
+    background: none !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.popular-grid h5.title-service{
+    display: block;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #ffffff;
+    background: radial-gradient(#3F8EF7,#245da9);
+    padding: 0.5em;
+    margin: 0px 0 25px;
+    text-transform: capitalize;
+}
+.contenerdor-final{
+ padding-bottom: 4em!important;
+}
+.logo a{
+    box-shadow: 0 4px 8px 0 #474747, 0 6px 20px 0 #474747;
+    text-align: center;
+}
+.tabla-descripcion{
+    padding-top: 3em;
+}
+.heading-agileinfo-lft{
+    text-align: left!important;
+    padding: 0em 3em;
+}
+div.agile_team_grid{
+    padding-bottom: 0.8em!important;
+}
+
+.cbp-ig-category{
+    font-family: sans-serif!important;
+    font-size: 0.7em!important;
+}
+
+.banner{
+    background:none!important;
+    max-height: 790px!important;
+}
+
+.banner-img{
+    max-height: 790px!important;
+    max-width: 100%!important;
+}
