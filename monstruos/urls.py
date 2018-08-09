@@ -20,6 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    url(r'^', include('autenticar.urls',namespace='autenticacion')),
+    url(r'^', include('servicios.urls',namespace='servicios')),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('cms.urls')),
 

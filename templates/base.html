@@ -60,8 +60,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- navbar-header -->
                     <div class="contact-bnr-w3-agile">
                         <ul>
-                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@example.com">{% static_placeholder 'contacto_email'%}</a></li>
-                            <li><i class="fa fa-phone" aria-hidden="true"></i>{% static_placeholder 'contacto_telefono'%}</li>
+                            <li>{% static_placeholder 'contacto_email'%}</li>
+                            <li>{% static_placeholder 'contacto_telefono'%}</li>
                         </ul>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h4>Iniciar sesión</h4>
                         <div class="row">
                             <div class="form-w3layouts">
-                                <form action="" method="post">
+                                <form action="{% url 'autenticacion:login' %}" method="post">
                                     {% csrf_token %}
                         			<input type="text" name="usuario" placeholder="usuario" required="true">
                         			<input type="password" name="password" placeholder="contraseña" required="true">
@@ -123,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h4>Registrate</h4>
                         <div class="row">
                             <div class="form-w3layouts">
-                                <form action="" method="post">
+                                <form action="{% url 'autenticacion:register'%}" method="post">
                                     {% csrf_token %}
                         			<input type="text" name="username" placeholder="usuario" required="true">
                         			<input type="email" name="email" placeholder="correo electroníco" required="true">
@@ -215,8 +215,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <h2 class="heading-agileinfo white-w3ls">Contactanos<span class="black-w3ls color-text-white">Welcome to our Emphasize. We are glad to have you around.</span></h2>
             <ul class="w3_address">
-                <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><span>{% static_placeholder 'contacto_telefono'%}</span></li>
-                <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span><a href="mailto:info@example.com">l{% static_placeholder 'contacto_email'%}</a></span></li>
+                <li>{% static_placeholder 'contacto_telefono'%}</li>
+                <li>{% static_placeholder 'contacto_email'%}</li>
                 <li><i class="fa fa-comments-o" aria-hidden="true"></i><span><a href="#" data-toggle="modal" data-target="#myModal1">Contactó >></a></span></li>
             </ul>
             <div class="clearfix"></div>
